@@ -12,7 +12,7 @@ The genesis file, [`snickerdoodle_genesis.json`](/snickerdoodle_genesis.json), d
 created. This file will create a subnet with the following parameters:
 
 - Subnet Name: `Snickerdoodle`
-- chainId: `42069`
+- [chainId](https://chainlist.org/): `36`
 - Total token amount: `13,500,000,000 DOODLE` 
 - Genesis Airdrop Account: `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266` (this is the first test account in Hardhat)
 
@@ -27,7 +27,7 @@ curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts
 ### Compile the subnet configuration
 
 ```shell
-./bin/avalanche subnet create snickerdoodle -f ./snickerdoodle_genesis.json --evm
+./bin/avalanche subnet create snickerdoodle --file ./snickerdoodle_genesis.json --evm
 ```
 
 ### Start the subnet on a local network
