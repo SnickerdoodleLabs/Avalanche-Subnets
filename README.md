@@ -27,7 +27,7 @@ curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts
 ### Compile the subnet configuration
 
 ```shell
-./bin/avalanche subnet create snickerdoodle -f ./snickerdoodle_genesis.json
+./bin/avalanche subnet create snickerdoodle -f ./snickerdoodle_genesis.json --evm
 ```
 
 ### Start the subnet on a local network
