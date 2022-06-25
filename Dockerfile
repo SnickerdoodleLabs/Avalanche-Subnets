@@ -9,3 +9,5 @@ WORKDIR /root
 
 # install the subnet cli
 RUN curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh | sh -s
+
+ENV PATH="${PATH}:/root/bin"
