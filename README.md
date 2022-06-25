@@ -1,4 +1,4 @@
-![Snickerdoodle](/assets/snickerdoodle_horizontal_notab.png)
+![Snickerdoodle](https://github.com/SnickerdoodleLabs/Snickerdoodle-Theme-Light/blob/main/snickerdoodle_horizontal_notab.png?raw=true)
 
 # Avalanche Local Subnet
 
