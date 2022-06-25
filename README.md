@@ -35,6 +35,25 @@ curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts
 ```shell
 ./bin/avalanche subnet deploy snickerdoodle -l
 ```
+
+### Check subnet status
+
+```shell
+./bin/avalanche network status
+```
+
+### Stop the subnet
+
+```shell
+./bin/avalanche network stop snickerdoodle
+```
+
+### Restarting the subnet
+
+```shell
+./bin/avalanche network start snickerdoodle
+```
+
 ## Outstanding questions
 
 - Do we want to put restrictions on who can deploy contracts to our subnet? Probably...
