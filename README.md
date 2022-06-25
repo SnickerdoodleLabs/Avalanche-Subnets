@@ -35,3 +35,7 @@ curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts
 ```shell
 ./bin/avalanche subnet deploy snickerdoodle -l
 ```
+## Outstanding questions
+
+- Do we want to put restrictions on who can deploy contracts to our subnet? Probably...
+- Where do we want to send [fees](https://docs.avax.network/subnets/customize-a-subnet#fee-recipient-1) from subnet validators? Probably the DAO?
