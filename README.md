@@ -16,39 +16,55 @@ created. This file will create a subnet with the following parameters:
 - Total token amount: `13,500,000,000 DOODLE` 
 - Genesis Airdrop Account: `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266` (this is the first test account in Hardhat)
 
-## Setting up
+## IMPORTANT: Docker Daemon Configuration
 
-### Download the Avalanche CLI
+The Avalanche subnet tool uses IPV6 to resolve local IP address. Unfortunatly, the docker engine is not configured out-of-the-box to 
+resolve IPV6 addresses. You must enable IPV6 in your local docker installation before creating a container from the subnet image. Update
+your [`daemon.json`](https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file) file to include the following
+attributes:
+
+```
+{ 
+        "ipv6": true,
+        "fixed-cidr-v6": "fd00::/80"
+}
+```
+
+
+## Manual Setup for Running Directly on Host Machine
+
+### 1. Download the Avalanche CLI
 
 ```shell
+cd Avalanche-Subnets
 curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh | sh -s
 ```
 
-### Compile the subnet configuration
+### 2. Compile the subnet configuration
 
 ```shell
 ./bin/avalanche subnet create snickerdoodle --file ./snickerdoodle_genesis.json --evm
 ```
 
-### Start the subnet on a local network
+### 3. Start the subnet on a local network
 
 ```shell
 ./bin/avalanche subnet deploy snickerdoodle -l
 ```
 
-### Check subnet status
+### 4. Check subnet status
 
 ```shell
 ./bin/avalanche network status
 ```
 
-### Stop the subnet
+### 5. Stop the subnet
 
 ```shell
 ./bin/avalanche network stop snickerdoodle
 ```
 
-### Restarting the subnet
+### 6. Restarting the subnet
 
 ```shell
 ./bin/avalanche network start snickerdoodle
